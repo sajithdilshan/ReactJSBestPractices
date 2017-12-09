@@ -64,7 +64,7 @@ In no particular order...
 ```javascript
   componentWillReceiveProps(nextProps) {
     this.setState({
-      count: props.count ? props.count : 0,
+      count: nextProps.count ? nextProps.count : 0
     });
   }
 ```
