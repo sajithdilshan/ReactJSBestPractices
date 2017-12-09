@@ -20,7 +20,7 @@ In no particular order...
   constructor(props) {
     super(props);
     this.state = {
-      count: props.count ? props.count : 0,
+      count: props.count ? props.count : 0
       average: 0,
     }
   }
