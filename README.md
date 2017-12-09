@@ -10,38 +10,38 @@ In no particular order...
 
 - Use PascalCase for Components and its respective file name
 ```javascript
-	class MyReactComponent extends React.Component {
+  class MyReactComponent extends React.Component {
 
-	}
+  }
 ```
 
 - Always define the initial state in the constructor of a component. If the initial state is dependent on the `props` make sure to specify default values when `props` are undefined.
 ```javascript
-	constructor(props) {
-		super(props);
-		this.state = {
-			count: props.count ? props.count : 0,
-		    average: 0,
-		}
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: props.count ? props.count : 0,
+      average: 0,
+    }
+  }
 ```
 
 - Use [fat arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) instead of binding method to `this` in the constructor.
 ```javascript
-	constructor(props) {
-		super(props);
-	}
+  constructor(props) {
+    super(props);
+  }
 
-	calculateSum = () => {
-		// logic goes here
-	}
+  calculateSum = () => {
+    // logic goes here
+  }
 ```
 
 - Always prefer [fat arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 ```javascript
-	calculateSum = () => {
-		// logic goes here
-	}
+  calculateSum = () => {
+    // logic goes here
+  }
 ```
 
 - Use `componentDidMount()` method when adding listeners (e.g: Flux Stores) instead of doing that within `componentWillMount()` or `constructor()` methods.
@@ -51,22 +51,22 @@ In no particular order...
 - When updating the state of a component if the update relies on the `state` of the component, use the updater function.
 
 ```javascript
-	calculateSum(addedValue) {
-		this.setState((prevState, props) => {
-			return {
-				sum: prevState.sum + addedValue
-			};
-		});
-	}
+  calculateSum(addedValue) {
+    this.setState((prevState, props) => {
+      return {
+        sum: prevState.sum + addedValue
+      };
+    });
+  }
 ```
 
 - If the initial state is dependent on `props` make sure to add the same logic in `componentWillReceiveProps(nextProps)` as well, unless it is not the expected behavior of the component.
 ```javascript
-	componentWillReceiveProps(nextProps) {
-		this.setState({
-			count: props.count ? props.count : 0,
-		});
-	}
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      count: props.count ? props.count : 0,
+    });
+  }
 ```
 
 - Keep the render method pure and simple as possible. Try to move all the dynamic style calculation, className changes, etc. into state properties or into functions.
@@ -81,10 +81,10 @@ In no particular order...
 
 - Use the [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) to create a copy an Array or an Object
 ```javascript
-	let arr = [1, 2, 3];
-	let arr2 = [...arr, 4] 
-	// arr2 becomes [1, 2, 3, 4]
-	// arr remains unaffected
+  let arr = [1, 2, 3];
+  let arr2 = [...arr, 4] 
+  // arr2 becomes [1, 2, 3, 4]
+  // arr remains unaffected
 ```
 
 
