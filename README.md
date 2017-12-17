@@ -86,9 +86,7 @@ In no particular order...
   // arr2 becomes [1, 2, 3, 4]
   // arr remains unaffected
 ```
-
-
-
+- Always use [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) to imrove the maintainability of the code and to guarantee the type correctness of the props
 
 
 
