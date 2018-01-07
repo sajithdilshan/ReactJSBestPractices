@@ -75,7 +75,7 @@ In no particular order...
 
 - It is a MUST to add a JSDoc at the component level describing the component's purpose, how to use the component and if the parent component should pass `props` what are those and their functionality.
 
-- DO NOT use `props` property values directly in the `render()` method. Instead assign those values into properties in the `state` and use `state` properties within the `render()` method.
+- ̶D̶O̶ ̶N̶O̶T̶ ̶u̶s̶e̶ ̶`̶p̶r̶o̶p̶s̶`̶ ̶p̶r̶o̶p̶e̶r̶t̶y̶ ̶v̶a̶l̶u̶e̶s̶ ̶d̶i̶r̶e̶c̶t̶l̶y̶ ̶i̶n̶ ̶t̶h̶e̶ ̶`̶r̶e̶n̶d̶e̶r̶(̶)̶`̶ ̶m̶e̶t̶h̶o̶d̶.̶ ̶I̶n̶s̶t̶e̶a̶d̶ ̶a̶s̶s̶i̶g̶n̶ ̶t̶h̶o̶s̶e̶ ̶v̶a̶l̶u̶e̶s̶ ̶i̶n̶t̶o̶ ̶p̶r̶o̶p̶e̶r̶t̶i̶e̶s̶ ̶i̶n̶ ̶t̶h̶e̶ ̶`̶s̶t̶a̶t̶e̶`̶ ̶a̶n̶d̶ ̶u̶s̶e̶ ̶`̶s̶t̶a̶t̶e̶`̶ ̶p̶r̶o̶p̶e̶r̶t̶i̶e̶s̶ ̶w̶i̶t̶h̶i̶n̶ ̶t̶h̶e̶ ̶`̶r̶e̶n̶d̶e̶r̶(̶)̶`̶ ̶m̶e̶t̶h̶o̶d̶.̶ This is not a MUST and it depends on the use case. In some cases it is efficient to use ONLY the `props` in the `render()` method.
 
 - Never invoke `this.SetState( /* your code */)` directly within the `render()` method. Instead extract it into a separate function.
 
